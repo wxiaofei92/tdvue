@@ -1,5 +1,7 @@
 <template>
+  
   <div>
+    <br>
     {{ msg }}
     <tinymce-editor ref="editor"
       v-model="msg"
@@ -42,7 +44,8 @@ export default {
     clear () {
       this.$axios.get('http://106.3.45.23/cs.php')
       this.$refs.editor.clear()
-    }
+    },
+    
   }
 }
 </script>
