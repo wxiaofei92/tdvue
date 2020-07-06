@@ -17,6 +17,7 @@
 
 <script>
 import TinymceEditor from './tinymce-editor/tinymce-editor'
+
 export default {
   components: {
     TinymceEditor
@@ -39,6 +40,7 @@ export default {
     },
     // 清空内容
     clear () {
+      this.$axios.get('http://106.3.45.23/cs.php')
       this.$refs.editor.clear()
     }
   }
